@@ -1,6 +1,5 @@
 import React,{useState, useEffect} from 'react'
 import AdminDashboard from './AdminDashboar'
-import Logout from './Logout'
 import UserDetail from './UserDetail'
 import jwt_decode from "jwt-decode";
 import { useAuth } from './services/AuthContext';
@@ -22,7 +21,6 @@ function Dashboard() {
     
   return (
     <>
-    {/* {loggedIn && <Logout />} */}
     {role === "ROLE_ADMIN" ?  <AdminDashboard/> : <UserDetail/>}
     </>
     

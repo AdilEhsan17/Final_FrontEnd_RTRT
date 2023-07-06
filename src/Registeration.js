@@ -176,7 +176,7 @@ const validateEmail = (input) => {
                         name="telephoneNumber"
                         variant="filled"
                         value={telephoneNumber}
-                        onChange={(e)=> setTelephoneNumber(e.target.value)}
+                        onChange={(e)=> {e.target.value === '' ? setTelephoneNumber(null) : setTelephoneNumber(e.target.value)}}
                         required
                         fullWidth
                         my={2}

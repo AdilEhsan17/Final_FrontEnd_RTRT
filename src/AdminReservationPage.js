@@ -6,6 +6,7 @@ import {
     Chip as MuiChip,
     Typography,
     Button,
+    InputLabel,
     MenuItem,
     Select,
     TextField
@@ -183,7 +184,7 @@ function AdminReservationPage() {
     margin: 0,}}>
           
           <div>
-            <Typography variant="h5" gutterBottom display="center" color={"primary"}>
+            <Typography variant="h5" gutterBottom display="center">
               Make a Reservation
             </Typography>
             <br/>
@@ -206,6 +207,7 @@ function AdminReservationPage() {
                 <Form noValidate >
                <div>
                  <TextField
+                 style={{ color: "black", backgroundColor: "#B6B6B4",svg: { color: "black"  } }}
                     margin="dense"
                     id="firstName"
                     label="First Name"
@@ -222,6 +224,7 @@ function AdminReservationPage() {
                 <br></br>
                 </div>
                         <TextField
+                        style={{ color: "black", backgroundColor: "#B6B6B4",svg: { color: "black"  } }}
                             margin="dense"
                             id="lastName"
                             label="Last Name"
@@ -237,6 +240,7 @@ function AdminReservationPage() {
                        <br></br>
            
                         <TextField
+                        style={{ color: "black", backgroundColor: "#B6B6B4",svg: { color: "black"  } }}
                             margin="dense"
                             id="customerContact"
                             label="Contact Number"
@@ -253,6 +257,7 @@ function AdminReservationPage() {
                      <br></br>
                      <br></br>
                      <div>
+                     <InputLabel id="numberOfPerson">Select No. of Persons</InputLabel>
                         <Select
                         labelId="numberOfPerson"
                         id="numberOfPerson"
@@ -262,9 +267,14 @@ function AdminReservationPage() {
                         onBlur={() => setFieldTouched("numberOfPerson", true)}
                         options={numberOfPerson}
                         sx={{
-                          width: 265,
-                          // height: 50,
-                          
+                          color: "black",
+                          background: "#B6B6B4",
+                          width: 230,
+                          height: 40,
+                          display:"relative",
+                          justifyContent:"center",
+                          alignItems:"center",
+                        
                         }}
                         //helperText={touched.numberOfPerson && errors.numberOfPerson}
                         error={errors.numberOfPerson && touched.numberOfPerson}
@@ -297,7 +307,7 @@ function AdminReservationPage() {
                                 format(newValue.toDate(), "yyyy-MM-dd")
                               );
                             }}
-                            
+                            style={{ color: "black", backgroundColor: "#B6B6B4", svg: { color: "black" } }}
                             renderInput={(params) => (
                               <Field
                                 component={TextField}
@@ -361,6 +371,7 @@ function AdminReservationPage() {
                         </div>
                         <br></br>
                       <Field
+                      style={{ color: "black", backgroundColor: "#B6B6B4",svg: { color: "black"  } }}
                         component={StyledTextField}
                         id="comment"
                         label="comment"

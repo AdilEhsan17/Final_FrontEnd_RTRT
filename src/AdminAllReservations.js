@@ -116,7 +116,6 @@ function AdminAllReservations() {
         headerName: 'Id',
         width: 50,
         renderCell: renderSerialNumber,
-        headerClassName: 'custom-header',
         headerAlign: 'center',
         align: 'center', 
        
@@ -129,7 +128,7 @@ function AdminAllReservations() {
         width: 160,
         valueGetter: (params) =>
           `${params.row.appUser.firstName || ''} ${params.row.appUser.lastName || ''}`,
-        headerClassName: 'custom-header',
+        
         headerAlign: 'center',
         align: 'center', 
       },
@@ -141,7 +140,7 @@ function AdminAllReservations() {
         renderCell: (params) => {
           return <>{params.value[2] + "-" + params.value[1] + "-" + params.value[0]}</>;
       },
-       headerClassName: 'custom-header',
+       
         headerAlign: 'center',
         align: 'center', 
       },
@@ -149,7 +148,7 @@ function AdminAllReservations() {
         field: 'startTime',
         headerName: 'Start Time',
         width: 80,
-        headerClassName: 'custom-header',
+        
         headerAlign: 'center',
         align: 'center', 
         renderCell: (params) => {
@@ -160,7 +159,7 @@ function AdminAllReservations() {
         field: 'endTime',
         headerName: 'End Time',
         width: 80,
-        headerClassName: 'custom-header',
+        
         headerAlign: 'center',
         align: 'center', 
         renderCell: (params) => {
@@ -171,7 +170,7 @@ function AdminAllReservations() {
         field: 'numberOfPerson',
         headerName: 'No. of Persons',
         width: 120,
-        headerClassName: 'custom-header',
+        
         headerAlign: 'center',
         align: 'center', 
       },
@@ -180,7 +179,7 @@ function AdminAllReservations() {
         headerName: 'Comment',
         width: 120,
         value: 8,
-        headerClassName: 'custom-header',
+        
         headerAlign: 'center',
         align: 'center', 
       }, {
@@ -188,7 +187,7 @@ function AdminAllReservations() {
         headerName: 'Status',
         width: 120,
         value: 8,
-        headerClassName: 'custom-header',
+        
         headerAlign: 'center',
         align: 'center', 
         renderCell: (params) => {
@@ -198,7 +197,7 @@ function AdminAllReservations() {
       {
         field: "ActionDelete",
         headerName: " ",
-        headerClassName: 'custom-header',
+        
         headerAlign: 'center',
         align: 'center', 
         sortable: false,
@@ -220,12 +219,12 @@ function AdminAllReservations() {
         }
       },
     ];
-    // const styles = {
-    //   customHeader: {
-    //     fontWeight: 'bold',
-    //     color: 'black',
-    //   },
-    // };
+     const styles = {
+       customHeader: {
+         fontWeight: 'bold',
+         color: 'black',
+       },
+     };
     
     const handleSearch = () => {
       const filteredRows = allReservations.filter((row) => {
@@ -314,7 +313,7 @@ function AdminAllReservations() {
         autoPageSize
         // pageSizeOptions={[5]}
         getRowId= {(row) => row.reservationId}
-        //classes={styles}
+        classes={styles}
         
       />
      </ThemeProvider>

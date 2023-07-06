@@ -201,7 +201,7 @@ function ReservationPage() {
                                   id="numberOfPerson"
                                   label="Persons"
                                   name="numberOfPerson"
-                                  value={selectedValue}
+                                  value={values.numberOfPerson}
                                   onChange={(event)=> setFieldValue("numberOfPerson", event.target.value)}
                                   onBlur={() => setFieldTouched("numberOfPerson", true)}
                                   options={numberOfPerson}

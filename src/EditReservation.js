@@ -50,11 +50,7 @@ function EditReservation({editReservation, userReservations, userId , reservatio
     let dateTimeValueCopy = {};
    
     
-    // const replaceCommasWithDashes = () => {
-    //   const modifiedValue = reservationDate.split(',').join('-');
-    //   const modifiedValueAsString = modifiedValue.toString();
-     
-    // };
+    
         useEffect(() => {
            if( userReservations){
             const result = userReservations.find((item)=>{
@@ -77,7 +73,7 @@ function EditReservation({editReservation, userReservations, userId , reservatio
       position: 'fixed',
        top: '30%',
        left: '40%',
-      //transform: 'translate(-100%, -200%)',
+      
       width: 400,
       height:400,
       bgcolor: 'white',
